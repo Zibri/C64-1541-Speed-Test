@@ -1,0 +1,131 @@
+License: 
+         1) This program is free for non commercial use.
+         2) This program must be licensed to be included in full or in part in commercial products.
+         3) The commercial license can be purchased one shot or paid as a percentage (10%).
+         4) The program as-is cannot do damage to a disk drive.
+         5) You are free to thank me by donating vintage hardware or a beer (paypal.me/Zibri)
+         6) Contact me for informations/bug reports (there should not be any) or requests.
+         
+         zibri AT zibri DOT org
+
+INSTRUCTIONS:
+
+************************    WARNING   ****************************
+Although this program can't do any damage, it is strongly advised
+not to run this program if you don't know what you are doing!
+******************************************************************
+
+************************    BIGWARNING   ****************************
+DO NOT TRY this program on drives with NON ORIGINAL Commodore ROM
+The program has been tested only with official ROMS.
+*********************************************************************
+
+F1 does the most accurate RPM test ever seen.
+It's accurate to 0.005 RPM. Exit by keep any key pressed until it stops.
+
+F3 align the head to track 42 in a better way than other programs do.
+F5 moves the head to track 1
+cursor up/down and left/right move the head 1 track at a time or 8 tracks at a time (if shift is pressed)
+key 8 and 9 force loading the program in drive 8 or 9 and set it as working drive.
+F7 moves the head to track 18 and exits the program.
+
+***IMPORTANT***
+If you need to switch off the drive, you must reload the program TO the drive by pressing number 8 or 9
+otherwise the program will freeze trying to execute it's code which is not in the drive anymore.
+
+Never switch off the drive when the head is positioned above track 35! Always exit using F7 which will
+move the head back to track 18 for safety.
+
+If, for any reason you f*uck up, don't panic: nothing in this program can damage the drive.
+You can run the program again loading it from tape or cartridge and reset the drive.
+
+Alternatively, just open the drive door, remove the disk and issue the command: OPEN15,8,15,"I":CLOSE15.
+The head will bump to track 1 then go to track 18 and then give error but the drive will work again.
+An alignment on track 42 is BETTER than the alignment on track 1 in most cases.
+
+Technical notes:
+The program "automagically" loads in the current drive.
+If the program is loaded from tape or cartridge it will load itself on drive 8 and bring the head to track 42.
+(This feature is to help in fixing broken drives who can't read or write anything)
+
+All functions except F1 work also without a disk in the drive.
+
+Why an accurate rpm test like this is so important?
+Because it is so accurate than can help you measure the "wobbling" (change in speed) an aging drive has.
+The reason is the belt that connects the motor to the spindle.
+A wobbling of 0.10-0.30 RPM is quite normal.
+A more pronounced wobbling can happen if the disk inside the drive is new and so offers more resistance to the drive motor,
+but that also means the belt is starting to get loose and must be soon changed.
+ 
+How to correctly align a drive:
+
+1) gently unscrew the screws of the track 1 "stop"
+2) press F3
+3) press F5
+4) gently move the track 1 block so there is 0.25 mm (a hair or little more) between the block and the head the head.
+5) screw the screws tight carefully checking the block is still at 0.25mm from the head.
+
+And now a bonus feature!
+
+Sonic head cleaning:
+
+a) With plain printer paper:
+
+1) insert a blank piece of paper (shaped as a floppy disk) inside the drive.
+   since the test starts when the "write protect" is OFF and stops when the "write protect" is on,
+   your cleaning paper should have the left edge like a floppy disk: black and a white spot.
+   
+   alternatively you can use a piece of black cardboard of the same size of a disk.
+   
+1a) you can choose to leave the drive door open or close it (more about this later)
+2) turn the drive upside down (leds must be near the table)
+3) press "u" and wait a few seconds (30 seconds should be enough.. maybe less or more)
+   you will hear a distinct musical note coming from you head (a central A at 880 Hz)
+4) carefully remove the paper from the drive
+
+the program will stop shaking the head and you should see some dirt on the paper.
+
+b) With plain printer paper and a piece of microfiber glued to it:
+   follow the same instruction as of "a)" but cut also the central hole
+   and put a piece of microfiber where the "disk window" normally is.
+   This time close the drive door before starting the cleaning so that the head
+   will be in direct contact with the microfiber.
+   
+   
+And your write head will be "clean as a whistle" :D
+
+This procedure is not harmful for the head or the stepper motor and should be repeated as often as possible
+to keep you head clean of impurities which will in time get stuck to it and need a physical removal using tools and brushes.
+This method is, believe it or not, the same method reflex cameras use to clean the CCD.
+Nothing however substitutes a good manual head cleaning, expecially of old drives because magnetic particles and dust
+are not easy to remove even by a simple brush. Sometimes you need isopropyl alcohol and a lot of patience.
+You could also use a quick method: put a thin cloth glued to a piece of carton in the drive, do not fully close the lid
+but make it so the head barely touchse the cloth and move the head back and forth using the cursors keys (holding the shift key).
+But again, it's up to you and your skills. This program, after all, is just a tool and a tool is as clever as the person using it.
+
+
+CREDITS:
+
+Piergiorgio "Zibri" Zambrini (main idea, main code, big font, graphics layout and a lot of testing)
+Flavio "Web" Pasqualin (additional coding, menu compression and big font coding, apha and beta testing)
+Alessandro "Dirk Daring" Chini (release cadidate tester)
+Amedeo Valoroso (release candidate tester)
+Sergio Ricci (ex commodore service center technician for consulting and cross checking)
+Giulio Bianchi (emulator compiler)
+Everyone in RAMJAM group for support, expecially Stefania Calcagno and Sergio Gervasini.
+And obviously my girlfriend and my dog for their special support and love.
+
+If you read everything until here, then I have a present for you!
+The program is user-friendly and leaves himself in the drive until it is overwritten by a drive operation.
+In other words: you can load my program (even without running it), then write "new" and write your own program in basic!
+The commands are:
+
+ "U30" + chr$(track): write test track
+ "U31" Measure time per rotation on *current* track (meant to be executed after executing U30 once)
+ "U32" + chr$(track): goto track (fast and without reading)
+ "U33*" reverse align to track 42. (I suggest to execute an U33 to track 18, or any normal track, after this.)
+
+Bonus:
+
+ "U34" + chr$(track)  move to track then vibrate the head at 880 Hz until the WP sensor is blocked.
+ 

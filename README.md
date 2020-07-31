@@ -1,4 +1,4 @@
-# C64-1541-Speed-Test
+# C64 1541 Speed Test
 A utility to test and fix a 1541,1541 II, 1570, 1571 or OC118 disk drive.
 
 <center><img src="https://github.com/Zibri/C64-1541-Speed-Test/blob/master/RPM.png?raw=true" />

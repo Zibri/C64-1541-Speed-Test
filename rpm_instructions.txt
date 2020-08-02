@@ -22,6 +22,7 @@ The program has been tested only with official ROMS.
 
 F1 does the most accurate RPM test ever seen.
 It's accurate to 0.005 RPM. Exit by keep any key pressed until it stops.
+It uses track #36 to perform the test overwriting any existing data on that track.
 
 F3 align the head to track 42 in a better way than other programs do.
 F5 moves the head to track 1

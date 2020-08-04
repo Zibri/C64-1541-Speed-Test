@@ -20,6 +20,11 @@ DO NOT TRY this program on drives with NON ORIGINAL Commodore ROM
 The program has been tested only with official ROMS.
 *********************************************************************
 
+************************    QUIRK   ****************************
+If you run this on a commodore 64 SX, please issue:
+POKE 53280,14:POKE 53281,6:RUN
+****************************************************************
+
 F1 does the most accurate RPM test ever seen.
 It's accurate to 0.005 RPM. Exit by keep any key pressed until it stops.
 It uses track #36 to perform the test overwriting any existing data on that track.

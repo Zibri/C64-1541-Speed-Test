@@ -8,3 +8,5 @@ A utility to test and fix a 1541,1541 II, 1570, 1571 or OC118 disk drive.
 
 
 <a href="https://youtu.be/W8jkXdinxKc"><img src="https://i.ytimg.com/vi/W8jkXdinxKc/maxresdefault.jpg"/>Video tutorial (italian) but you can enable automatic subtitle in any language.</a>
+
+Check out also Amedeo page and tutorial at: http://www.valoroso.it/regolare-il-commodore-1541-con-speed-test-by-zibri/ 

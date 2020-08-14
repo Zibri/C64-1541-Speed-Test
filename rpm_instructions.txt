@@ -20,20 +20,15 @@ DO NOT TRY this program on drives with NON ORIGINAL Commodore ROM
 The program has been tested only with official ROMS.
 *********************************************************************
 
-************************    QUIRK   ****************************
-If you run this on a commodore 64 SX, please issue:
-POKE 53280,14:POKE 53281,6:RUN
-****************************************************************
-
 F1 does the most accurate RPM test ever seen.
 It's accurate to 0.005 RPM. Exit by keep any key pressed until it stops.
-It uses track #36 to perform the test overwriting any existing data on that track.
 
 F3 align the head to track 42 in a better way than other programs do.
 F5 moves the head to track 1
 cursor up/down and left/right move the head 1 track at a time or 8 tracks at a time (if shift is pressed)
 key 8 and 9 force loading the program in drive 8 or 9 and set it as working drive.
 F7 moves the head to track 18 and exits the program.
+B align the head to track 1 and to a bump
 
 ***IMPORTANT***
 If you need to switch off the drive, you must reload the program TO the drive by pressing number 8 or 9

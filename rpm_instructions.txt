@@ -11,6 +11,12 @@ License:
 INSTRUCTIONS:
 
 ************************    WARNING   ****************************
+Load this program from device 10 or from the drive you want to
+test. So if you are using for example an U2 or SD2IEC, please
+set it up as device 10 or hell will break loose.
+******************************************************************
+
+************************    WARNING   ****************************
 Although this program can't do any damage, it is strongly advised
 not to run this program if you don't know what you are doing!
 ******************************************************************

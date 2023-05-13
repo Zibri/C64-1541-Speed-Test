@@ -9,6 +9,10 @@ License:
          zibri AT zibri DOT org
 
 INSTRUCTIONS:
+************************      INFO    ****************************
+For the speedtest to work, a writable floppy disk must be in the
+drive.
+******************************************************************
 
 ************************    WARNING   ****************************
 Load this program from device 10 or from the drive you want to
